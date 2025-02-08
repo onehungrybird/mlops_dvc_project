@@ -1,4 +1,13 @@
-data/
-models/
+# Ignore everything in the data/ folder
+data/*
+
+# Except .dvc files in the data/ folder
+!data/*.dvc
+
+models/*
+!models/*.dvc
+
+dvc_accessKeys.csv
+
 __pycache__/
 *.log

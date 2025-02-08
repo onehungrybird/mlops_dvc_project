@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  download_data:
+    cmd: python src/download_data.py
+    outs:
+    - path: data/mnist.pkl
+      hash: md5
+      md5: e27929dd4f50a8d6cbd202f35014252f
+      size: 439125124
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+    - path: data/mnist.pkl
+      hash: md5
+      md5: e27929dd4f50a8d6cbd202f35014252f
+      size: 439125124
+    outs:
+    - path: models/logistic_regression.pkl
+      hash: md5
+      md5: a673fdb9d9f3d3299ea0b1ac630d8329
+      size: 77463

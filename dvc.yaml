@@ -1,0 +1,12 @@
+stages:
+  download_data:
+    cmd: python src/download_data.py
+    outs:
+      - data/mnist.pkl
+
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+      - data/mnist.pkl
+    outs:
+      - models/logistic_regression.pkl
