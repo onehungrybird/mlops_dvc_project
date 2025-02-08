@@ -1,0 +1,5 @@
+outs:
+- md5: e27929dd4f50a8d6cbd202f35014252f
+  size: 439125124
+  hash: md5
+  path: mnist.pkl
